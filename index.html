@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Book Flight - AirGO</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body>
+	<header>
+		<h2>
+			<a href="#">AirGO</a>
+		</h2>
+	</header>
+
+
+	<section class="cover-view">
+		<div class="background-image" style="background-image: url(assets/img/flight-cover.jpg);"></div>
+		<h1>Go Anywhere with us...</h1>
+		<h3>Flat 30% off.</h3>
+		<a href="#book-now" class="primary-btn" id="book-now-button">Book Now</a>
+	</section>
+
+
+	<section id="book-now" class="book-now-section">
+		<div id="filter-toggle" style="transform: translateX(0px) rotate(90deg);">
+			<img src="./assets/img/drawer.png" id="filter-toggle-image" alt="Drawer">
+		</div>
+		<div class="flight-filter-section" id="filter-section">
+			<input id="tab1" type="radio" name="tabs" class="tab-radio" checked>
+			<label for="tab1" class="tab-label">
+				<i class="fas fa-long-arrow-alt-right"></i>Oneway</label>
+
+			<input id="tab2" type="radio" name="tabs" class="tab-radio">
+			<label for="tab2" class="tab-label">
+				<i class="fas fa-exchange-alt"></i>Return</label>
+
+			<section id="content1">
+				<form class="filter-form" id="filter-form" autocomplete="off" action="" onsubmit="return filterData()" method="POST">
+					<div>
+						<input type="text" name="origin-city" id="origin-city" placeholder="Enter Origin City" autocomplete="off" required>
+					</div>
+					<div>
+						<input type="text" name="destination-city" id="destination-city" placeholder="Enter Destination City" autocomplete="off"
+						 required>
+					</div>
+					<div>
+						<input type="date" name="departure-date" id="departure-date" data-placeholder="Departure Date" required aria-required="true"
+						 required>
+					</div>
+					<div>
+						<input type="date" name="arrival-date" id="arrival-date" data-placeholder="Return Date" aria-required="true" style="display: none;">
+					</div>
+					<div>
+						<input type="number" name="passenger-count" id="passenger-count" min="1" max="10" placeholder="Passengers" required>
+					</div>
+					<div>
+						<input type="submit" class="primary-btn" title="Search" value="Search">
+					</div>
+					<fieldset class="slide-container">
+						<div class="filter-price">
+								<i class="fas fa-rupee-sign"></i>
+							<span id="selected-range">9000.00</span>
+						</div>
+
+						<legend>Refine flight search</legend>
+						<input type="range" min="1000" max="10000" value="9000" step="1000" id="flight-unit-price">
+						<div class="range-indicator">
+							<div>1K</div>
+							<div>10K</div>
+						</div>
+					</fieldset>
+				</form>
+
+			</section>
+		</div>
+		<div class="flight-detail-section" id="flight-detail-section">
+			<div class="flight-detail-header">
+				<div id="flight-detail-header1">Search Results</div>
+				<div>
+					<div id="flight-detail-header2"></div>
+					<div id="flight-detail-header3"></div>
+				</div>
+			</div>
+			<div class='no-result' id="search-flight">
+				<span>
+					<img src="./assets/img/search.png" alt="Search">
+				</span>
+				<span>Search Flights</span>
+			</div>
+			<div class="scroll-panel-details" id="scroll-panel-details">
+
+			</div>
+
+		</div>
+
+	</section>
+	<footer>
+		<ul>
+			<li>
+				<a href="https://www.linkedin.com/in/abhishek-jha-a5a40097/" target="_blank">
+					<i class="fab fa-linkedin"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://github.com/abhishek9180" target="_blank">
+					<i class="fab fa-github-square"></i>
+				</a>
+			</li>
+		</ul>
+		<p>Made by
+			<a href="https://www.linkedin.com/in/abhishek-jha-a5a40097/" target="_blank">Abhishek Jha</a>.</p>
+		<p>Icons made by
+			<a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from
+			<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
+			<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+		</p>
+	</footer>
+
+	<script type="text/javascript" src="./assets/scripts/flight-booking.js" async defer></script>
+	<!-- script to generate dummy flight data -->
+	<!-- <script type="text/javascript" src="./assets/scripts/flight-data-generator.js"></script> -->
+</body>
+
+</html>
