@@ -4,7 +4,11 @@ var CACHE_NAME = 'AirGO-cache-v1';
 var urlsToCache = [
   '/',
   '/index.html',
-  '/assets/scripts/flight-booking.js'
+  '/assets/scripts/flight-booking.js',
+  '/assets/css/styles.css',
+  'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
+  'https://fonts.googleapis.com/css?family=Open+Sans',
+  'https://fonts.googleapis.com/css?family=Quicksand'
 ];
 
 self.addEventListener('install', function(e) {
