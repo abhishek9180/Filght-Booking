@@ -4,7 +4,7 @@ var CACHE_NAME = 'AirGO-cache-v1';
 var urlsToCache = [
   '/',
   '/index.html',
-  '/*.js'
+  '/assets/scripts/flight-booking.js'
 ];
 
 self.addEventListener('install', function(e) {
